@@ -1,0 +1,67 @@
+
+<body>
+
+
+  <button type="button" class="btn btn-danger">Danger</button>
+  
+  <div class="center">
+
+ <form #loginform ="ngForm" (ngSubmit) = "loginUser()">
+
+   <small class="text-danger" *ngIf =msg > {{msg.message}}</small>
+
+
+ 
+    <div class="txt_field">
+      <input type="email" id="email" name="email" [(ngModel)] = user.email
+      required pattern="^\w+@[a-zA-z_]+?\.[a-zA-z]{1,3}$"
+       #email ="ngModel" [class.is-invalid] = "email.invalid && email.touched"
+      >
+      <label for="email">Email address</label>
+    </div>
+      <div *ngIf = " email.errors && (email.invalid && email.touched)">
+        <small class="text-danger" *ngIf ="email.errors['required']">Email is required</small>
+        <small class="text-danger" *ngIf ="email.errors['pattern']">Enter valid email</small>
+      </div>
+
+      <!-- <small class = "text-danger"[class.d-none] = "email.valid || email.untouched">Email is required</small> -->
+
+    <div class="txt_field">
+        
+      <input type="password" id="password"name ="password" [(ngModel)] = user.password required
+       #password ="ngModel" [class.is-invalid] = "password.invalid && password.touched"
+        >
+        <label for="password">Password</label>
+      
+      </div>
+      <div *ngIf = " email.errors && (password.invalid && password.touched)">
+        <small class="text-danger" *ngIf ="password.errors['required']">Password is required</small>
+      </div>
+        <!-- <small class = "text-danger"[class.d-none] = "password.valid || password.untouched">Password is required</small> -->
+    <button [disabled]="loginform.form.invalid" type="submit" class="button">Login</button>
+ 
+          
+      <div class="signup_link" >
+              <small  [routerLink]= "['/registration']"> Not a member? <a>Sign up</a></small>
+            </div> 
+            <div class="signup_link">
+              <small >Or Sign in with social platforms</small>
+            </div>
+                <div class="social-media">
+                <a href="#" class="social-icon">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                  <a href="#" class="social-icon">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                  <a href="#" class="social-icon">
+                    <i class="fab fa-google"></i>
+                  </a>
+                  <a href="#" class="social-icon">
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                </div>
+  </form> 
+</div>
+</body>
+
