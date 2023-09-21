@@ -1,7 +1,6 @@
-	
-	<body>
+<body>
 	<!-- navbar -->
-	<div class="container" >
+	<div class="container">
 
 
 
@@ -9,18 +8,25 @@
 			<!-- header -->
 			<div class="header">
 				<div class="profile-pic">
-					<img src="/assets/images/user.jpg" class="cover">
+					<li><img src="/assets/images/user.jpg" class="cover"  data-toggle="modal" data-target="#profileModal"></li>
 				</div>
 				<!-- icons -->
 				<ul class="nav_icons">
-					<li><ion-icon name="person-add"></ion-icon></li>
+
+					<div class="row">
+					<div class="col-12">
+					<li><ion-icon data-toggle="modal" data-target="#myModal"
+							name="person-add"></ion-icon></li>
+					</div>
+					</div>
 					<li><ion-icon name="ellipsis-vertical"></ion-icon></li>
-					<button routerLink="/login">LogOut</button>
+					<button data-toggle="modal" data-target="#f-listModal">Friends</button>
 				</ul>
 			</div>
 			<!-- Search input -->
 			<div class="search_chat">
 				<div>
+					
 					<input type="text" placeholder="Search or start new chat">
 					<ion-icon name="search-outline"></ion-icon>
 				</div>
@@ -135,7 +141,7 @@
 			</div>
 		</div>
 		<div class="rightside">
-			
+
 			<!-- right header -->
 			<div class="header">
 				<div class="imgText">
@@ -231,23 +237,23 @@
 		<div class="status">
 			<!-- header -->
 			<div class="header">
-				
+
 				<!-- icons -->
 				<ul class="nav_icons">
 					<li><ion-icon name="logo-instagram"></ion-icon></li>
 				</ul>
 			</div>
 			<div class="status seen">
-			<div class="profile-pic">
-				<img src="/assets/images/user.jpg" class="cover">
+				<div class="profile-pic">
+					<img src="/assets/images/user.jpg" class="cover">
+				</div>
+				<div class="profile-pic">
+					<img src="/assets/images/user.jpg" class="cover">
+				</div>
+				<div class="profile-pic">
+					<img src="/assets/images/user2.png" class="cover">
+				</div>
 			</div>
-			<div class="profile-pic">
-				<img src="/assets/images/user.jpg" class="cover">
-			</div>
-			<div class="profile-pic">
-				<img src="/assets/images/user2.png" class="cover">
-			</div>
-		</div>
 			<div class="status unseen">
 				<div class="profile-pic">
 					<img src="/assets/images/user.jpg" class="cover">
@@ -256,7 +262,156 @@
 		</div>
 
 
+		<div class="row">
+			<div class="col-md-12">
+				<div class="modal-box">
+					<!-- Modal -->
+					<div class="modal fade" id="myModal" data-backdrop="false" tabindex="-1" role="dialog"
+						aria-labelledby="myModalLabel">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">×</span>
+								</button>
+								<div class="modal-body">
+									<div class="modal-icon">
+										<ion-icon name="person-add-outline"></ion-icon>
+									</div>
+									<h3 class="title">Add New Friend</h3>
+
+
+									<form action="">
+
+									<div class="input-group">
+										
+										<input class="name"type="email" class="form-control" placeholder="Username"
+											required="">
+					
+									</div>
+									<div class="input-group">
+									
+										<input name="contact" type="email" class="form-control" placeholder="Contact number"
+											required="">
+									</div>
+									<button class="btn"><ion-icon name="send"></ion-icon></button>
+								</form>
+								<hr class="dashed">
+								<h3 class="suggested">People you may like!</h3>
+								<hr class="dashed">
+								<div class="suggestedList">
+								<div class="block">
+									<div class="imgbx">
+										<img src="/assets/images/chatBg.jpg" class="cover">
+									</div>
+									<div class="user-details">
+										<div class="name-msgTime">
+											<h4>Aubrey Mashaba</h4>
+											<div class="nav_icons">
+											<li  routerLink="#"><ion-icon name="person-add"></ion-icon></li>
+										</div>
+										</div>
+										<div class="last_message">
+											<p>Online</p>
+										</div>
+									</div>
+								</div>
+								<div class="block">
+									<div class="imgbx">
+										<img src="/assets/images/chatBg.jpg" class="cover">
+									</div>
+									<div class="user-details">
+										<div class="name-msgTime">
+											<h4>Aubrey Mashaba</h4>
+											<div class="nav_icons">
+												<li   routerLink="#">	<ion-icon name="person-add" ></ion-icon></li>
+											</div>
+									
+										</div>
+										<div class="last_message">
+											<p>Offline</p>
+										</div>
+									</div>
+								</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+<!--Profile Modal -->
+<div class="modal-box">
+<div class="modal fade" id="profileModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"  data-backdrop="false">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+			<div class="modal-body">
+				<div class="icon">
+					
+					<i><img src="/assets/images/user.jpg" class="icon"></i>
+			
+				</div>
+				<h3 class="title">Aubrey</h3>
+				<p class="contact">0728685375</p>
+				<p class="contact">No of friends : 20</p>
+				
+				<button routerLink="/login">LogOut</button>
+			</div>
+		</div>
+	</div>
+</div>
 
 	</div>
+
+<!-- Friends List Modal-->
+
+<div class="modal-box">
+	<div class="modal fade" id="f-listModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"  data-backdrop="false">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+				<div class="modal-body">
+					<div class="icon">
+						
+						<i><ion-icon name="people"></ion-icon></i>
+				
+					</div>
+					<hr class="dashed">
+					<h4>All friends</h4>
+					<hr class="dashed">
+					<div class="block">
+
+						<div class="imgbx">
+							<img src="/assets/images/chatBg.jpg" class="cover">
+						</div>
+						<div class="user-details">
+							<div class="name-msgTime">
+								<h4>Aubrey Mashaba</h4>
+							</div>
+							<div class="last_message">
+								<p>Offline</p>
+							</div>
+						</div>
+					</div>
+					
+					<button routerLink="/login">LogOut</button>
+				</div>
+			</div>
+		</div>
+	</div>
 	
+		</div>
+</div>
+
+
+
+
+</div>
+
 </body>

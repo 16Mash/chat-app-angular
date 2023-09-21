@@ -10,6 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { LoginsuccessComponent } from './loginsuccess/loginsuccess.component';
 import { ChatFormComponent } from './chat-form/chat-form.component';
 import { IonicModule } from '@ionic/angular';
+import { FriendsListComponent } from './friends-list/friends-list.component';
 
 
 
@@ -19,7 +20,8 @@ import { IonicModule } from '@ionic/angular';
     LoginComponent,
     SignupComponent,
     LoginsuccessComponent,
-    ChatFormComponent
+    ChatFormComponent,
+    FriendsListComponent
   ],
   imports: [
     BrowserModule,

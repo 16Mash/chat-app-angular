@@ -369,4 +369,227 @@ justify-content: flex-end;
     0 0 0 4px #008069 ;
     
     }
-   
+.modal-box{ font-family: 'Montserrat', sans-serif; }
+.modal-box .show-modal{
+    color: #175cab;
+    background-color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: capitalize;
+    padding: 10px 15px;
+    margin: 80px auto 0;
+    border: none;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+    display: block;
+}
+.modal-box .show-modal:hover,
+.modal-box .show-modal:focus{
+    color: #175cab;
+    border: none;
+    outline: none;
+}
+.modal-backdrop.in{ opacity: 0.6; }
+
+.modal-box .modal-dialog{
+    width: 550px;
+    margin: 70px auto 0;
+}
+.modal.fade .modal-dialog{
+    transform: translateX(100px);
+    transition: all 400ms cubic-bezier(.47,1.64,.41,.8);
+}
+.modal.in .modal-dialog{ transform: translateX(0); }
+.modal-box .modal-dialog .modal-content{
+    background: #fff;
+    text-align: center;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+.modal-box .modal-dialog .modal-content .close{
+    color: #1eaaf1;
+    font-size: 30px;
+    line-height: 15px;
+    opacity: 1;
+    position: absolute;
+    left: auto;
+    top: 20px;
+    right: 15px;
+    z-index: 1;
+    transition: all 0.3s;
+}
+.modal-box .modal-dialog .modal-content .close span{
+    margin: -2px 0 0 0;
+    display: block;
+}
+.modal-content .close:hover{ color: #1eaaf1; }
+.modal-box .modal-dialog .modal-content .modal-body{ padding: 0 45px 45px !important; }
+.modal-box .modal-dialog .modal-content .modal-body .modal-icon{
+    color: #fff;
+    background: #4fc235;
+    font-size: 70px;
+    line-height: 125px;
+    width: 125px;
+    height: 125px;
+    margin: -63px auto 15px;
+    border-radius: 50%;
+    display: inline-block;
+}
+.modal-box .modal-dialog .modal-content .modal-body .title{
+    color: #4fc235;
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 50px;
+    text-transform: capitalize;
+    margin: 0 0 15px;
+}
+.modal-box .modal-dialog .modal-content .modal-body .suggested{
+  color: #4fc235;
+  font-size: 25px;
+  font-weight: 300;
+  line-height: 50px;
+  text-transform: capitalize;
+  margin: 0 0 15px;
+}
+.modal-box .modal-dialog .modal-content .modal-body .description{
+    color: #767676;
+    font-size: 23px;
+    font-weight: 400;
+    margin: 0 0 15px;
+}
+.modal-box .modal-dialog .modal-content .modal-body .input-group{
+    background-color: #eff7ff;
+    padding: 2px 1px;
+    margin: 0 auto;
+    border: 1px solid #c5cfdb;
+    border-radius: 25px;
+    margin-bottom: 10px;
+}
+
+.modal-box .modal-dialog .modal-content .modal-body input{
+    background-color: transparent;
+    font-size: 18px;
+    width: calc(100% - 45px);
+    height: 40px;
+    border-radius: 25px;
+    border: none;
+    box-shadow: none;
+
+}
+
+.modal-box .modal-dialog .modal-content .modal-body input:focus{ box-shadow: none; }
+.modal-box .modal-dialog .modal-content .modal-body .btn{
+    color: #fff;
+    background-color: #1eaaf1;
+    font-size: 20px;
+    line-height: 35px;
+    height: 40px;
+    width: 40px;
+    padding: 0;
+    border-radius: 50%;
+    border: none;
+    transition: all 0.4s ease 0s;
+    margin-bottom: 10px;
+}
+.modal-box .modal-dialog .modal-content .modal-body .btn:hover{
+    color: #fff;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.6);
+}
+@media only screen and (max-width: 767px){
+    .modal-box .modal-dialog{ width: 95% !important; }
+    .modal-box .modal-dialog .modal-content .modal-body{ padding: 0 25px 45px !important; }
+    .modal-box .modal-dialog .modal-content .modal-body .title{ font-size: 33px; }
+}
+
+.modal-box .modal-dialog .modal-content .modal-body .suggestedList{
+  margin-bottom: 5px;
+  position: relative;
+   height: calc(100% - 110px); /*60 + 50  */
+  overflow-y:auto;
+  }
+
+.modal-box .modal-dialog .modal-content .modal-body  .block{
+  position: relative;
+  width: 100%;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  cursor: pointer;
+  }
+
+  .modal-box .modal-dialog .modal-content .modal-body  .block .imgbx{
+    position: relative;
+    min-width: 45px;
+    height:45px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  .modal-box .modal-dialog .modal-content .modal-body  .block .user-details{
+   position:relative;
+   width: 100%;
+  }
+  .modal-box .modal-dialog .modal-content .modal-body .block .user-details .name-msgTime{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    }
+  .modal-box .modal-dialog .modal-content .modal-body  .block .user-details .name-msgTime h4{
+    font-size: 0.9em;
+    font-weight: 600;
+    color: #111;
+    }
+    .modal-box .modal-dialog .modal-content .modal-body  .block .user-details .name-msgTime .nav_icons{
+      display: flex;
+      
+      }
+      .modal-box .modal-dialog .modal-content .modal-body  .block .user-details .name-msgTime .nav_icons li{
+        display: flex;
+        list-style: none;
+        cursor: pointer;
+        color: #51585c;
+        font-size: 1.5em;
+        margin-left: 2px;
+        }
+        .modal-box .modal-dialog .modal-content .modal-body .icon .profile-pic{
+          position: relative;
+          width:40px;
+          height: 40px;
+          overflow: hidden;
+          border-radius: 50%;
+          cursor: pointer;
+          }
+          .modal-box .modal-dialog .modal-content .modal-body .icon .profile-pic .cover{
+          position: absolute;
+          align-items: center;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          
+          }
+          .modal-box .modal-dialog .modal-content .modal-body .icon{
+            color: #fff;
+            background: #00BFE3;
+            font-size: 60px;
+            text-align: center;
+            text-shadow: 0 0 10px#555 inset;
+            line-height: 130px;
+            width: 130px;
+            height: 130px;
+            margin: -25px auto 30px;
+            border-radius: 100px;
+            box-shadow: 0 0 0 5px #fff inset, 0 0 0 10px #273c75 inset, 7px 7px 2px rgba(144, 144, 144,0.8);
+            display: block;
+        }
+        .modal-box .modal-dialog .modal-content .modal-body button{
+
+          border-radius: 20px;
+          background-color:#ec0909;
+          border: none;
+          padding: 5px;
+          font-size: 12px;
+      
+        }
+    
